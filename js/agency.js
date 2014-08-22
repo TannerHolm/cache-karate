@@ -22,37 +22,37 @@ $('#myTab a').click(function (e) {
   $(this).tab('show')
 })
 
-var cbpAnimatedHeader = (function() {
+// var cbpAnimatedHeader = (function() {
 
-    var docElem = document.documentElement,
-        header = document.querySelector( '.navbar-default' ),
-        didScroll = false,
-        changeHeaderOn = 500;
+    // var docElem = document.documentElement,
+    //     header = document.querySelector( '.navbar-default' ),
+    //     didScroll = false,
+    //     changeHeaderOn = 000;
 
-    function init() {
-        window.addEventListener( 'scroll', function( event ) {
-            if( !didScroll ) {
-                didScroll = true;
-                setTimeout( scrollPage, 300 );
-            }
-        }, false );
-    }
+    // function init() {
+    //     window.addEventListener( 'scroll', function( event ) {
+    //         if( !didScroll ) {
+    //             didScroll = true;
+    //             setTimeout( scrollPage, 300 );
+    //         }
+    //     }, false );
+    // }
 
-    function scrollPage() {
-        var sy = scrollY();
-        if ( sy >= changeHeaderOn ) {
-            classie.add( header, 'navbar-fixed-top' );
-        }
-        else {
-            classie.remove( header, 'navbar-fixed-top' );
-        }
-        didScroll = false;
-    }
+//     function scrollPage() {
+//         var sy = scrollY();
+//         if ( sy >= changeHeaderOn ) {
+//             classie.add( header, 'navbar-fixed-top' );
+//         }
+//         else {
+//             classie.remove( header, 'navbar-fixed-top' );
+//         }
+//         didScroll = false;
+//     }
 
-    function scrollY() {
-        return window.pageYOffset || docElem.scrollTop;
-    }
+//     function scrollY() {
+//         return window.pageYOffset || docElem.scrollTop;
+//     }
 
-    init();
+//     init();
 
-})();
+// })();
