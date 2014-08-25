@@ -278,8 +278,9 @@ fieldset[disabled] .btn-xl.active {
     top: -45px;
     position: relative;
 }*/
+
 #rotating-item-wrapper {
-    position: fixed;
+    position: absolute;
     right: 0; 
     left: 0;
     top: 0;
@@ -291,13 +292,16 @@ fieldset[disabled] .btn-xl.active {
 .rotating-item {
     display: none;
     position: absolute;
-    /*top: -15%;*/
+    top: -30%;
     /*top: 100px;*/
     left: 0;
-    /*height: 800px !important;*/
-    /*height: 100;*/
+    right: 0;
+    height: 900px !important;
+    /*height: 100%;*/
+    /*width: auto;*/
+    margin-right: 0%;
+    margin-left: 0%;
     opacity: 0.8;
-    width: 100%;
     background-size: cover !important;
     background: no-repeat center center fixed;
 }
@@ -379,7 +383,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 100px 0;
+        padding: 75px 0;
     }
 }
 
@@ -690,8 +694,7 @@ aside.clients img {
 }
 
 section#contact {
-    background-color: #222;
-    background-image: url(../img/map-image.png);
+    background-color: #000;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -930,16 +933,6 @@ header {
     top: 100px;
 }
 
-#classes{
-
-}
-.class-image{
-    background: url(../img/leslie.jpg) no-repeat center center ;
-    height: 400px;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
 table, tbody, tr, td{
     border: 1px solid black;
     padding: 1em;
@@ -965,4 +958,78 @@ table, tbody, tr, td{
 
 .page-container{
      background: #fff;
+}
+
+/*.contact{
+        background-image: url(../img/logo.png);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.7;
+        z-index: -100;
+        display: inline;
+        height: 1000px;
+        width: auto;
+        top: 0;
+        position: absolute;
+}*/
+
+.image-caption{
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    font-size: 25px;
+    font-family: nyala;
+    margin: 0 !important;
+    width: 100%;
+     position: absolute; 
+    left: 0; 
+    right: 0; 
+    bottom: 20px;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+.image-caption p:first-child {
+    margin: 0 !important;
+    margin-bottom: 0 !important;
+    font-size: 25px;
+}
+
+/*CLASSES SECTION, CLASS IMAGES*/
+
+.class-image-nano{
+    background: url(../img/classes/caleb_karate.jpg) no-repeat center center ;
+    height: 400px !important;
+    /*width: auto;*/
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.class-image-little{
+    background: url(../img/classes/little-ninjas.jpg) no-repeat center center ;
+    height: 400px !important;
+    /*width: auto;*/
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.class-image-beginner{
+    background: url(../img/classes/beginning.jpg) no-repeat center center ;
+    height: 400px !important;
+    /*width: auto;*/
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.class-image-adult{
+    background: url(../img/classes/karate-kick.jpg) no-repeat center center ;
+    height: 400px !important;
+    /*width: auto;*/
+    -webkit-background-size: cover;
+    background-size: cover;
 }
