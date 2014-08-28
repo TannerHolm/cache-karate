@@ -14,7 +14,6 @@
  <!-- Page Content -->
     <div class="container">
 
-      
 
         <!-- Defenses Row -->
         <div class="row">
