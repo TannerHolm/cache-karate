@@ -22,7 +22,7 @@ Route::get('/', function()
 // });
 
 // Route::resource('students', array('as' => 'students' , 'uses' => 'StudentsController@index'));
-Route::group(array('prefix' => 'admin'), function()
+Route::group(array( 'prefix' => 'admin'), function()
 	{
 Route::get('/', array('uses' => 'AdminController@index'));
 
@@ -30,10 +30,12 @@ Route::get('/', array('uses' => 'AdminController@index'));
 
 Route::group(array('prefix' => 'students'), function()
 {
+
+
 		Route::get('/', array('as' => 'students', 'uses' => 'StudentsController@index'));
-		Route::get('create', array('as' => 'create/student', 'uses' => 'StudentsController@getCreate'));
+		Route::get('create', array('as' => 'create', 'uses' => 'StudentsController@create'));
 		Route::post('create', 'StudentsController@postCreate');
-		Route::get('{studentId}/edit', array('as' => 'update/student', 'uses' => 'StudentsController@getEdit'));
+		Route::get('{studentId}/edit', array('as' => 'update/student', 'uses' => 'StudentsController@edit'));
 		Route::post('{studentId}/edit', 'StudentsController@postEdit');
 		Route::get('{studentId}/delete', array('as' => 'delete/student', 'uses' => 'StudentsController@getDelete'));
 		Route::get('{studentId}/restore', array('as' => 'restore/student', 'uses' => 'StudentsController@getRestore'));
