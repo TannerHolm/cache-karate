@@ -288,23 +288,24 @@ fieldset[disabled] .btn-xl.active {
     z-index: -100;
     background: #000;
     height: 600px;
+    width: auto;
+    overflow: hidden;
 
 }
 .rotating-item {
-    display: none;
+    display: none ;
     position: absolute;
-    top: -30%;
-    /*top: 100px;*/
+    height: auto;
+    width: 100%;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    height: 900px !important;
-    /*height: 100%;*/
-    /*width: auto;*/
-    margin-right: 0%;
-    margin-left: 0%;
     opacity: 0.8;
-    background-size: cover !important;
+    /*background-size: cover !important;*/
     background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 
@@ -1049,18 +1050,26 @@ button{
     margin-top: 10px;
 }
 
+
+
+.item-higher{
+    top: -20%;
+}
 /*MEDIA QUERIES*/
 
-@media(min-width:1300px){
+@media(max-width:1300px){
 
 .rotating-item{
     height: auto;
-    width: 100%;
-    top: -25%;
+    width: auto;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     position: absolute;
+    -webkit-background-size: cover !important;
+    background-size: cover;
 }
+
 
 }
