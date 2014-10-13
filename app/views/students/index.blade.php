@@ -9,7 +9,29 @@
 		</div>
 	</h1>
 </div>
+<div class="row">
+	
+<div class="col-xs-2">
+	<label for="class">Class</label>
+<select>
+  <option value="">Nano Ninjas</option>
+  <option value="">Little Ninjas</option>
+  <option value="">Beginner</option>
+  <option value="">Teen</option>
+  <option value="">Womens</option>
+</select>
 
+</div>
+<div class="col-xs-2">
+	<label for="class">Belt</label>
+<select id="filterbelt">
+@foreach ($belts as $belt)
+  <option value="{{$belt->id}}">{{$belt}}</option>
+@endforeach
+</select>
+
+</div>
+</div>
 <!-- <a class="btn btn-medium" href="{{ URL::to('admin/users?withTrashed=true') }}">Include Deleted Users</a> -->
 <!-- <a class="btn btn-medium" href="{{ URL::to('admin/users?onlyTrashed=true') }}">Include Only Deleted Users</a> -->
 
@@ -30,13 +52,16 @@
 	<tbody>
 		@foreach($users as $user)
 		<tr>
-			<td>{{$user->first_name}}</td>
+			<td><a href="students/{{$user->id}}/show">{{$user->first_name}}</a></td>
 			<td>{{$user->last_name}}</td>
-			<td>{{$user->belt}}</td>
-			<td>{{$user->class}}</td>
-		</tr>
+			<td>{{$user->belt_rank}}</td>
+			<td>{{$user->class_id}}</td>
+			<!-- <td>{{$user->class}}</td> -->
 		@endforeach
+		</tr>
 	</tbody>
 </table>
+
+
 
 @stop

@@ -15,9 +15,11 @@ class UpdateUsersTable extends Migration {
 		Schema::table('users', function(Blueprint $table)
 		{
 			$table->string('username');
-			$table->string('belt');
-			$table->string('class');
+			$table->string('class_id');
+			$table->string('belt_rank');
+			$table->string('profile_image');
 		});
+	
 	}
 
 

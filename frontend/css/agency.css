@@ -4,7 +4,40 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+.link{
+    height: 60px;
+    width: 100% !important;
+    background: #CCCCCC;
+    text-align: center;
+}
+
+.link h3 a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.link h3 a:hover{
+    text-decoration: none;
+    color: gray;
+}
+.address{
+    text-decoration: none !important;
+    color: black;
+    font-size: 24px;
+}
  
+ .address:hover{
+    color: #0066CC;
+
+ }
+table{
+    margin-top: 10px;
+}
+.bio-text{
+    margin: auto;
+    width: 90%;
+}
 
 body {
     overflow-x: hidden;
@@ -16,6 +49,15 @@ body {
     color: #777;
 }
 
+.sub-text{
+    text-align: center;
+    width:  50%;
+    margin: auto;
+}
+
+.class-text{
+    font-size: 12px;
+}
 .text-primary {
     color: #0066CC;
 }
@@ -373,7 +415,7 @@ section h2.section-heading {
 }
 
 section h3.section-subheading {
-    margin-bottom: 75px;
+    /*margin-bottom: 75px;*/
     text-transform: none;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
@@ -954,6 +996,7 @@ table, tbody, tr, td{
 
 .blog{
     height: 350px;
+    overflow-y:scroll;
 }
 
 .student-spotlight img{
@@ -998,6 +1041,7 @@ table, tbody, tr, td{
     color: #ffffff;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    display: none;
 }
 
 .image-caption p:first-child {
@@ -1010,7 +1054,10 @@ table, tbody, tr, td{
 
 .class-image{
     height: 400px;
-    
+/*        height: 300px;
+    width: 500px;
+    margin: 0 auto;
+*/    
 }
 .class-image-nano{
     background: url(../img/classes/caleb_karate.jpg) no-repeat center center ;
@@ -1032,6 +1079,15 @@ table, tbody, tr, td{
         background-size: cover; 
         margin-top: 20px;
 }
+
+.class-image-teen{
+    background: url(../img/classes/teen.jpg) no-repeat center center ;
+        -webkit-background-size: cover;
+        background-size: cover; 
+        margin-top: 20px;
+}
+
+
 
 .class-image-adult{
     background: url(../img/classes/karate-kick.jpg) no-repeat center center ;
@@ -1064,8 +1120,27 @@ button{
     background: url(../img/1leslie.jpg) center center;
 -webkit-background-size: cover;
 background-size: cover;
-display:inline-block;
+/*display:inline-block;*/
+margin: 0 auto;
+/*padding-bottom: 20px;*/
 }
+.about-leslie-sub-title{
+    text-align: center;
+}
+
+.about-leslie-title{
+    text-align: center;
+}
+
+.about-tanner-sub-title{
+    text-align: center;
+}
+
+.about-tanner-title{
+    text-align: center;
+}
+
+
 
 .about-tanner{
     height: 300px;
@@ -1073,13 +1148,31 @@ display:inline-block;
     background: url(../img/1tanner.jpg) center center;
 -webkit-background-size: cover;
 background-size: cover;
-display:inline-block;
+/*display:inline-block;*/
+margin: 0 auto !important;
 }
 
 .rent{
     margin-bottom: 20px;
 }
 /*MEDIA QUERIES*/
+
+
+@media(min-width:1600px){
+    
+    header{
+        height:600px;
+    }               
+}
+
+
+@media(min-width:1300px){
+    
+    header{
+        height:400px;
+    }               
+}
+
 
 @media(max-width:1300px){
 
@@ -1095,7 +1188,6 @@ display:inline-block;
     background-size: cover;
 }
 
-
 }
 
 @media(max-width:786px){
@@ -1107,21 +1199,21 @@ section{
 .about-leslie{
         height: 200px;
     width: 200px;
-    display: inline-block;
-    margin: 0px;
+    /*display: inline-block;*/
+    /*margin: 0px;*/
 
 }
 
 .about-tanner{
         height: 200px;
     width: 200px;
-    display: inline-block;
+    /*display: inline-block;*/
     margin: 0px;
 
 }
 
 header{
-    height: 400px;
+    height: 350px;
 }
 
 #rotating-item-wrapper {
@@ -1159,19 +1251,48 @@ header{
 .video{
     width:  200px;
 }
+
 .class-image{
-/*    width: 300px;
-    height:300px;
-*/}
+    /*height: 400px;*/
+        height: 300px;
+    width: 500px;
+    margin: 0 auto;
+    
 }
-@media(max-width:500px){
+table{
+    margin: 10px auto;
+}
+
+.class-buttons{
+    margin-left: 20px;
+    width: 100%;
+}
+}
+@media(max-width:575px){
 
 header{
  height: 200px;
 }
 
+.sub-text{
+    text-align: center;
+    width:  100%;
+    margin: auto;
+}
+.class-buttons{
+    margin-left: 0px;
+    /*width: 100%;*/
+}
+.address{
+    text-decoration: none !important;
+    color: black;
+    font-size: 16px;
+}
 }
 
 
 
 
+.note-editable{
+    border: 1px solid black;
+}

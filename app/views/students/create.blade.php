@@ -12,7 +12,7 @@ Create a User ::
 
 <div class="page-header">
 	<h1>
-		Create a New User
+		Create a New Student
 
 		<div class="pull-right">
 			<a href="{{ route('students') }}" class="btn btn-small btn-inverse"><i class="icon-circle-arrow-left icon-white"></i> Back</a>
@@ -88,17 +88,15 @@ Create a User ::
 				</div><!--/row-->
 			</div><!--/form-body-->
 			<div class="row">
-				<div class="control-group col-md-6 {{ $errors->has('groups') ? 'error' : '' }}">
-					<legend>Groups</legend>
-					<div class="controls">
-						<select name="groups[]" id="groups[]">
-						</select>
+				<div class="col-xs-2">
+	<label for="class">Belt</label>
+<select id="filterbelt">
+@foreach ($belts as $belt)
+  <option value="{{$belt->id}}">{{$belt->rank}}</option>
+@endforeach
+</select>
 
-						<span class="help-block" style="margin-bottom:100px;">
-							Select a group to assign to the user, remember that a user takes on the permissions of the group they are assigned.
-						</span>
-					</div>
-				</div>
+</div>
 			</div>
 		</div>
 

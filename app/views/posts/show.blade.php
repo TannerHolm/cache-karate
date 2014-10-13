@@ -1,0 +1,1 @@
+C:\wamp\www\cache-karate\app/views/posts/show.blade.php

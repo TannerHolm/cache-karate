@@ -4,7 +4,40 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+.link{
+    height: 60px;
+    width: 100% !important;
+    background: #CCCCCC;
+    text-align: center;
+}
+
+.link h3 a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.link h3 a:hover{
+    text-decoration: none;
+    color: gray;
+}
+.address{
+    text-decoration: none !important;
+    color: black;
+    font-size: 24px;
+}
  
+ .address:hover{
+    color: #0066CC;
+
+ }
+table{
+    margin-top: 10px;
+}
+.bio-text{
+    margin: auto;
+    width: 90%;
+}
 
 body {
     overflow-x: hidden;
@@ -16,6 +49,15 @@ body {
     color: #777;
 }
 
+.sub-text{
+    text-align: center;
+    width:  50%;
+    margin: auto;
+}
+
+.class-text{
+    font-size: 12px;
+}
 .text-primary {
     color: #0066CC;
 }
@@ -288,23 +330,22 @@ fieldset[disabled] .btn-xl.active {
     z-index: -100;
     background: #000;
     height: 600px;
+    width: auto;
+    overflow: hidden;
 
 }
 .rotating-item {
-    display: none;
+    display: none ;
     position: absolute;
-    top: -30%;
-    /*top: 100px;*/
+    height: auto;
+    width: 100%;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    height: 900px !important;
-    /*height: 100%;*/
-    /*width: auto;*/
-    margin-right: 0%;
-    margin-left: 0%;
-    opacity: 0.8;
-    background-size: cover !important;
     background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 
@@ -374,7 +415,7 @@ section h2.section-heading {
 }
 
 section h3.section-subheading {
-    margin-bottom: 75px;
+    /*margin-bottom: 75px;*/
     text-transform: none;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
@@ -941,19 +982,25 @@ table, tbody, tr, td{
     padding: 1em;
 }
 
+.video{
+    width:  500px;
+}
+
 .student-spotlight{
     height: 400px;
     background-color: #777;
     text-align: center;
     color: white;
+    overflow-y:scroll;
 
 }
 
 .blog{
     height: 350px;
+    overflow-y:scroll;
 }
 
-.student-spotlight img{
+.student-spotlight span{
     height: 30%;
     width: auto;
     /*background-color: #e7e7e7;*/
@@ -995,6 +1042,7 @@ table, tbody, tr, td{
     color: #ffffff;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    display: none;
 }
 
 .image-caption p:first-child {
@@ -1005,36 +1053,48 @@ table, tbody, tr, td{
 
 /*CLASSES SECTION, CLASS IMAGES*/
 
+.class-image{
+    height: 400px;
+/*        height: 300px;
+    width: 500px;
+    margin: 0 auto;
+*/    
+}
 .class-image-nano{
     background: url(../img/classes/caleb_karate.jpg) no-repeat center center ;
-    height: 400px !important;
-    /*width: auto;*/
-    -webkit-background-size: cover;
+-webkit-background-size: cover;
     background-size: cover;
+    margin-top: 20px;
 }
 
 .class-image-little{
     background: url(../img/classes/little-ninjas.jpg) no-repeat center center ;
-    height: 400px !important;
-    /*width: auto;*/
-    -webkit-background-size: cover;
-    background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover; 
+        margin-top: 20px;
 }
 
 .class-image-beginner{
     background: url(../img/classes/beginning.jpg) no-repeat center center ;
-    height: 400px !important;
-    /*width: auto;*/
-    -webkit-background-size: cover;
-    background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover; 
+        margin-top: 20px;
 }
+
+.class-image-teen{
+    background: url(../img/classes/teen.jpg) no-repeat center center ;
+        -webkit-background-size: cover;
+        background-size: cover; 
+        margin-top: 20px;
+}
+
+
 
 .class-image-adult{
     background: url(../img/classes/karate-kick.jpg) no-repeat center center ;
-    height: 400px !important;
-    /*width: auto;*/
-    -webkit-background-size: cover;
-    background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover; 
+        margin-top: 20px;
 }
 
 #shin-toshi{
@@ -1049,18 +1109,186 @@ button{
     margin-top: 10px;
 }
 
+
+
+.item-higher{
+    top: -20%;
+}
+
+.about-leslie{
+    height: 300px;
+    width: 300px;
+    background: url(../img/1leslie.jpg) center center;
+-webkit-background-size: cover;
+background-size: cover;
+/*display:inline-block;*/
+margin: 0 auto;
+/*padding-bottom: 20px;*/
+}
+.about-leslie-sub-title{
+    text-align: center;
+}
+
+.about-leslie-title{
+    text-align: center;
+}
+
+.about-tanner-sub-title{
+    text-align: center;
+}
+
+.about-tanner-title{
+    text-align: center;
+}
+
+
+
+.about-tanner{
+    height: 300px;
+    width: 300px;
+    background: url(../img/1tanner.jpg) center center;
+-webkit-background-size: cover;
+background-size: cover;
+/*display:inline-block;*/
+margin: 0 auto !important;
+}
+
+.rent{
+    margin-bottom: 20px;
+}
 /*MEDIA QUERIES*/
 
+
+@media(min-width:1600px){
+    
+    header{
+        height:600px;
+    }               
+}
+
+
 @media(min-width:1300px){
+    
+    header{
+        height:400px;
+    }               
+}
+
+
+@media(max-width:1300px){
 
 .rotating-item{
     height: auto;
-    width: 100%;
-    top: -25%;
+    width: auto;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     position: absolute;
+    -webkit-background-size: cover !important;
+    background-size: cover;
 }
 
 }
+
+@media(max-width:786px){
+
+section{
+    padding-bottom: 100px;
+}
+
+.about-leslie{
+        height: 200px;
+    width: 200px;
+    /*display: inline-block;*/
+    /*margin: 0px;*/
+
+}
+
+.about-tanner{
+        height: 200px;
+    width: 200px;
+    /*display: inline-block;*/
+    margin: 0px;
+
+}
+
+header{
+    height: 350px;
+}
+
+#rotating-item-wrapper {
+    position: absolute;
+    right: 0; 
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -100;
+    height: 600px;
+    width: auto;
+    overflow: hidden;
+
+}
+
+.rotating-item{
+ display: none ;
+    position: absolute;
+    /*height: auto;*/
+    width: 130%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*opacity: 0.8;*/
+    /*background-size: cover !important;*/
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.item-lower{
+    top:35px;
+}
+
+.video{
+    width:  200px;
+}
+
+.class-image{
+    /*height: 400px;*/
+        height: 300px;
+    width: 500px;
+    margin: 0 auto;
+    
+}
+table{
+    margin: 10px auto;
+}
+
+.class-buttons{
+    margin-left: 20px;
+    width: 100%;
+}
+}
+@media(max-width:575px){
+
+header{
+ height: 200px;
+}
+
+.sub-text{
+    text-align: center;
+    width:  100%;
+    margin: auto;
+}
+.class-buttons{
+    margin-left: 0px;
+    /*width: 100%;*/
+}
+.address{
+    text-decoration: none !important;
+    color: black;
+    font-size: 16px;
+}
+}
+
+

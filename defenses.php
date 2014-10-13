@@ -1,3 +1,4 @@
+<?php include("/home6/afterori/public_html/cache-karate/students/password_student.php"); ?>
 <?php include "header.php"; ?>
 
 <div class="container" style="margin-top: 50px;">
@@ -19,7 +20,7 @@
         <div class="row">
             <div class="col-md-4 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="img/coming-soon.jpg" alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Defense Name</a>
@@ -28,7 +29,7 @@
             </div>
             <div class="col-md-4 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="img/coming-soon.jpg" alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Defense Name</a>
@@ -37,7 +38,7 @@
             </div>
             <div class="col-md-4 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="img/coming-soon.jpg" alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Defense Name</a>
@@ -51,7 +52,7 @@
         <div class="row">
             <div class="col-md-4 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="img/coming-soon.jpg" alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Defense Name</a>
@@ -60,7 +61,7 @@
             </div>
             <div class="col-md-4 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="img/coming-soon.jpg" alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Defense Name</a>
@@ -69,7 +70,7 @@
             </div>
             <div class="col-md-4 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="img/coming-soon.jpg" alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Defense Name</a>
@@ -82,7 +83,7 @@
         <div class="row">
             <div class="col-md-4 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="img/coming-soon.jpg" alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Defense Name</a>
@@ -91,7 +92,7 @@
             </div>
             <div class="col-md-4 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="img/coming-soon.jpg" alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Defense Name</a>
@@ -100,7 +101,7 @@
             </div>
             <div class="col-md-4 img-portfolio">
                 <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="img/coming-soon.jpg" alt="">
                 </a>
                 <h3>
                     <a href="portfolio-item.html">Defense Name</a>

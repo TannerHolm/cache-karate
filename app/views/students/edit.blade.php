@@ -74,7 +74,7 @@
 			</div><!--/form-body-->
 			<div class="row">
 				<div class="control-group col-md-6 {{ $errors->has('groups') ? 'error' : '' }}">
-					<legend>Belt</legend>
+						<legend>Belt</legend>
 					<div class="controls">
 						<select name="groups[]" id="groups[]">
 							

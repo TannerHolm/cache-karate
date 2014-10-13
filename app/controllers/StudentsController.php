@@ -40,8 +40,11 @@ protected $validationRules = array(
 				'onlyTrashed' => Input::get('onlyTrashed'),
 			));
 
+
+			$belts = Belt::has('user');
+
 		// Show the page
-		return View::make('students.index', compact('users'));
+		return View::make('students.index', compact('users', 'belts'));
 	}
 
 	/**
@@ -65,7 +68,8 @@ protected $validationRules = array(
 		$selectedPermissions = Input::old('permissions', array('superuser' => -1));
 		// $this->encodePermissions($selectedPermissions);
 
-		return View::make('students.create');
+			$belts = Belt::all();
+		return View::make('students.create', compact('belts'));
 	}
 
 	public function postCreate()
@@ -129,7 +133,7 @@ protected $validationRules = array(
 		}
 
 		// Redirect to the user creation page
-		return Redirect::route('students');
+		return Redirect::route('students', compact('belts', 'users'));
 	}
 
 	// return View::make('students.create');
@@ -162,9 +166,9 @@ protected $validationRules = array(
 	 */
 	public function show($id)
 	{
-		$student = Student::findOrFail($id);
+		$user = User::findOrFail($id);
 
-		return View::make('students.show', compact('student'));
+		return View::make('students.show', compact('user'));
 	}
 
 	/**
