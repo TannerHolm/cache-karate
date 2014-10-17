@@ -11,10 +11,22 @@
 |
 */
 
+
 Route::get('/', function()
 {
 	return View::make('frontend.home');
 });
+
+Route::get('student', function()
+{
+    return Student::all();
+});
+
+Route::post('student', function()
+{
+    return Student::create(Input::all());
+});
+
 
 // Route::get('/students', function()
 // {
@@ -84,3 +96,5 @@ Route::group(array('prefix' => 'spotlight'), function()
 // 	Route::get('/', array('as' => 'account', 'uses' => 'adminController@account'));
 
 // });
+Blade::setContentTags('[[', ']]'); // for variables and all things Blade
+Blade::setEscapedContentTags('[[[', ']]]'); // for escaped data

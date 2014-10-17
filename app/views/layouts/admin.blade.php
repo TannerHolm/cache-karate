@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 
 <head>
 
@@ -157,6 +157,9 @@
     <!-- Custom Theme JavaScript -->
     <script src="/js/sb-admin-2.js"></script>
     <script src="/js/dropzone.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <script src="/js/main.js"></script>
+
 
 </body>
 

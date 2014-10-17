@@ -18,33 +18,34 @@ protected $validationRules = array(
 	 */
 	public function index()
 	{
-		$students = Student::all();
+		// $students = Student::all();
 
 		// Grab all the users
-        $users = Sentry::getUserProvider()->createModel();
+        // $users = Sentry::getUserProvider()->createModel();
 
 		// Do we want to include the deleted users?
-		if (Input::get('withTrashed'))
-		{
-			$users = $users->withTrashed();
-		}
-		else if (Input::get('onlyTrashed'))
-		{
-			$users = $users->onlyTrashed();
-		}
+		// if (Input::get('withTrashed'))
+		// {
+		// 	$users = $users->withTrashed();
+		// }
+		// else if (Input::get('onlyTrashed'))
+		// {
+		// 	$users = $users->onlyTrashed();
+		// }
 
 		// Paginate the users
-		$users = $users->paginate()
-			->appends(array(
-				'withTrashed' => Input::get('withTrashed'),
-				'onlyTrashed' => Input::get('onlyTrashed'),
-			));
+		// $users = $users->paginate()
+		// 	->appends(array(
+		// 		'withTrashed' => Input::get('withTrashed'),
+		// 		'onlyTrashed' => Input::get('onlyTrashed'),
+		// 	));
 
 
-			$belts = Belt::has('user');
-
+			// $belts = Belt::has('user');
+// 
 		// Show the page
-		return View::make('students.index', compact('users', 'belts'));
+		return View::make('students.index');
+		// return View::make('students.index', compact('users', 'belts'));
 	}
 
 	/**

@@ -5,33 +5,21 @@
 		Student Management
 
 		<div class="pull-right">
-			<a href="{{ URL::to('admin/students/create') }}" class="btn btn-small btn-info"><i class="icon-plus-sign icon-white"></i> Create</a>
+			<!-- <a href="{{ URL::to('admin/students/create') }}" class="btn btn-small btn-info"><i class="icon-plus-sign icon-white"></i> Create</a> -->
 		</div>
 	</h1>
 </div>
+
+<div ng-controller="StudentsController">
+	
 <div class="row">
 	
 <div class="col-xs-2">
-	<label for="class">Class</label>
-<select>
-  <option value="">Nano Ninjas</option>
-  <option value="">Little Ninjas</option>
-  <option value="">Beginner</option>
-  <option value="">Teen</option>
-  <option value="">Womens</option>
-</select>
+	<label for="class">Filter</label>
+    <input type="text" placeholder="search name, class or belt" ng-model="search" style="margin-bottom:10px;">
+</div>
+</div>
 
-</div>
-<div class="col-xs-2">
-	<label for="class">Belt</label>
-<select id="filterbelt">
-@foreach ($belts as $belt)
-  <option value="{{$belt->id}}">{{$belt}}</option>
-@endforeach
-</select>
-
-</div>
-</div>
 <!-- <a class="btn btn-medium" href="{{ URL::to('admin/users?withTrashed=true') }}">Include Deleted Users</a> -->
 <!-- <a class="btn btn-medium" href="{{ URL::to('admin/users?onlyTrashed=true') }}">Include Only Deleted Users</a> -->
 
@@ -50,18 +38,23 @@
 		</tr>
 	</thead>
 	<tbody>
-		@foreach($users as $user)
-		<tr>
-			<td><a href="students/{{$user->id}}/show">{{$user->first_name}}</a></td>
-			<td>{{$user->last_name}}</td>
-			<td>{{$user->belt_rank}}</td>
-			<td>{{$user->class_id}}</td>
-			<!-- <td>{{$user->class}}</td> -->
-		@endforeach
+		<tr ng-repeat="student in students | filter:search">
+			<th>{{student.first_name}}</th>
+			<th>{{student.last_name}}</th>
+			<th>{{student.class_id}}</th>
+			<th>{{student.belt_rank}}</th>
 		</tr>
 	</tbody>
 </table>
 
+<form ng-submit="addStudent()">
+        <input type="text" placeholder="First Name" ng-model="studentFirstName">
+        <input type="text" placeholder="Last Name" ng-model="studentLastName">
+        <input type="text" placeholder="Class" ng-model="studentClass">
+        <input type="text" placeholder="Belt" ng-model="studentBeltRank">
+        <button type="submit">Add Student</button>
+    </form>
+</div>
 
 
 @stop
